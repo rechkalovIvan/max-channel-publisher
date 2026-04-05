@@ -1,0 +1,13 @@
+{
+  "name": "max-channel-publisher",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MAX bot: receive admin messages and publish posts to channel with a fixed button",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@maxhub/max-bot-api": "^0.2.2",
+    "dotenv": "^16.4.7"
+  }
+}
