@@ -4,6 +4,14 @@ import { prepareMediaAttachment } from '../services/mediaService.js';
 import { extractMessageData } from '../utils/extractMessageData.js';
 import { config } from '../config.js';
 
+async function replySafely(ctx, text) {
+  try {
+    await ctx.reply(text);
+  } catch (error) {
+    console.error('Failed to send reply to user:', error);
+  }
+}
+
 export async function handleMessageCreated(ctx) {
   try {
     const chatId = ctx.chatId;
@@ -43,6 +51,6 @@ export async function handleMessageCreated(ctx) {
     await ctx.reply('Пост опубликован в канал.');
   } catch (error) {
     console.error('message_created error:', error);
-    await ctx.reply('Не удалось опубликовать пост. Проверьте логи контейнера.');
+    await replySafely(ctx, 'Не удалось опубликовать пост. Попробуйте ещё раз через минуту.');
   }
 }
