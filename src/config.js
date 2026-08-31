@@ -4,7 +4,6 @@ export const config = {
   buttonText: process.env.BUTTON_TEXT || 'Написать боту',
   buttonUrl: process.env.BUTTON_URL,
   adminUserId: process.env.ADMIN_USER_ID,
-  maxApiBaseUrl: process.env.MAX_API_BASE_URL || 'https://platform-api.max.ru',
   nodeEnv: process.env.NODE_ENV || 'development'
 };
 

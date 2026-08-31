@@ -28,7 +28,6 @@ cp .env.example .env
 | Переменная | Описание | Пример |
 |---|---|---|
 | `BOT_TOKEN` | Токен бота от PrimeBot | `abc123...` |
-| `MAX_API_BASE_URL` | Базовый URL MAX Bot API | `https://platform-api.max.ru` |
 | `CHANNEL_CHAT_ID` | ID канала для публикации | `-1001234567890` |
 | `BUTTON_TEXT` | Текст кнопки на посте | `Написать боту` |
 | `BUTTON_URL` | Ссылка кнопки | `https://max.ru/u/your_bot` |
